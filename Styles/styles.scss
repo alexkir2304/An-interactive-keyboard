@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
+
+%centerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.mainWrapper {
+  @extend %centerItems;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 800px;
+  min-height: 50%;
+  color: #390099;
+  font-family: 'Prompt', sans-serif;
+}
+
+.header {
+  //text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.myKeyboard {
+  @extend %centerItems;
+  flex-direction: column;
+  background: linear-gradient(#90f1ef, #ffd6e0);
+  border-radius: 10px;
+
+}
+
+.row {
+  @extend %centerItems;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  .shift {
+    flex-basis: 25%;
+  }
+  .space {
+    flex-basis: 80%;
+  }
+}
+
+.row3 {
+  .btn:first-child, .fakebtn {
+    text-align: center;
+  }
+}
+
+.btn, .fakebtn {
+  @extend %centerItems;
+  height: 50px;
+  flex-basis: 15%;
+  border: 1px solid black;
+  border-radius: 10px;
+  opacity: 0.7;
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
+.btnNeedsToClick {                         //
+  //color:green;
+  animation: needsToClick 0.3s infinite;
+  @keyframes needsToClick {
+    0% {transform: scale(1)}
+    50% {transform: scale(1.15)}
+    100% {transform: scale(1)}
+  }
+}
+
+.btnClicked {
+  //background-color: green;
+  animation: clicked 0.3s infinite;
+  animation-iteration-count: 1;
+
+  @keyframes clicked {
+    0% {transform: scale(1)}
+    50% {transform: scale(1.1)}
+    100% {transform: scale(1)}
+  }
+}

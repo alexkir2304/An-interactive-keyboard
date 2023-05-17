@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
+.mainWrapper, .myKeyboard, .row, .btn, .fakebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.mainWrapper {
+  height: 100vh; }
+
+.wrapper {
+  width: 80%;
+  max-width: 800px;
+  min-height: 50%;
+  color: #390099;
+  font-family: 'Prompt', sans-serif; }
+
+.header {
+  font-size: 40px;
+  margin-bottom: 40px; }
+
+.myKeyboard {
+  flex-direction: column;
+  background: linear-gradient(#90f1ef, #ffd6e0);
+  border-radius: 10px; }
+
+.row {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%; }
+  .row:not(:first-child) {
+    margin-top: 10px; }
+  .row .shift {
+    flex-basis: 25%; }
+  .row .space {
+    flex-basis: 80%; }
+
+.row3 .btn:first-child, .row3 .fakebtn {
+  text-align: center; }
+
+.btn, .fakebtn {
+  height: 50px;
+  flex-basis: 15%;
+  border: 1px solid black;
+  border-radius: 10px;
+  opacity: 0.7; }
+  .btn:not(:first-child), .fakebtn:not(:first-child) {
+    margin-left: 8px; }
+
+.btnNeedsToClick {
+  animation: needsToClick 0.3s infinite; }
+@keyframes needsToClick {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.15); }
+  100% {
+    transform: scale(1); } }
+.btnClicked {
+  animation: clicked 0.3s infinite;
+  animation-iteration-count: 1; }
+@keyframes clicked {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+/*# sourceMappingURL=styles.css.map */
